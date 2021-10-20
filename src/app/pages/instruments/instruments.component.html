@@ -1,0 +1,5 @@
+<app-displaybar buttonTitle="Book Now" text="The Right Tools. The Right Training. "></app-displaybar>
+<ng-container *ngFor="let card of onecards; let i = index ">
+  <app-centercard *ngIf="i%2 == 0" color="--fourth" [header]="card.title" [body]="card.body" [buttonTitle]="card.buttonTitle" [buttonLink]="card.buttonLink"></app-centercard>
+  <app-centercard *ngIf="i%2 != 0" color="--fifth" [header]="card.title" [body]="card.body" [buttonTitle]="card.buttonTitle" [buttonLink]="card.buttonLink"></app-centercard>
+</ng-container>

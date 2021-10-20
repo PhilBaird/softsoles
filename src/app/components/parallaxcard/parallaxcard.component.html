@@ -1,0 +1,15 @@
+<mat-card class="parallaxcard" style="background-image: url({{imageLink}})">
+  <div class="container">
+    <div class="mat-h1">
+      {{header}}
+    </div>
+    <div class="mat-body">
+      {{body}}
+    </div>
+    <div class="small-button" >
+      <button *ngIf="buttonTitle" class="white button" mat-raised-button [routerLink]="buttonLink" routerLinkActive="active">
+        {{buttonTitle}}
+      </button>
+    </div>
+  </div>
+</mat-card>

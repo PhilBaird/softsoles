@@ -1,0 +1,22 @@
+.parallaxcard{
+  min-height: 20rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*.white{*/
+/*  color: black;*/
+/*  background-color: white;*/
+/*}*/
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100rem;
+  text-align: center;
+}

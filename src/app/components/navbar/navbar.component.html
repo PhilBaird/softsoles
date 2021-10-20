@@ -1,0 +1,16 @@
+<mat-toolbar class="navbar color">
+  <div class="img-wrap">
+    <img src="../../../assets/softsoleslogo.png" alt="soft soles">
+  </div>
+  <div class="img-wrap">
+    <img src="../../../assets/footcanadalogo.png" alt="foot canada">
+  </div>
+  <span class="spacer"></span>
+  <div class="nav-items">
+    <ng-container *ngFor="let nav of navItems">
+      <a class="mat-toolbar color" mat-button [routerLink]="nav.link" routerLinkActive="active">
+        {{nav.title}}
+      </a>
+    </ng-container>
+  </div>
+</mat-toolbar>

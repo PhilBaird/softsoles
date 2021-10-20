@@ -1,0 +1,13 @@
+<app-displaybar buttonTitle="Book Now" text="Best Practices. Best Equipment. "></app-displaybar>
+<ng-container *ngFor="let bullet of onebullet; let i = index ">
+  <app-bulletcard *ngIf="i%2 == 0" color="--fifth" [header]="bullet.title" [firstbody]="bullet.firstbody" [secondbody]="bullet.secondbody" [bullets]="bullet.bullets" columns="2" [buttonTitle]="bullet.buttonTitle" ></app-bulletcard>
+  <app-bulletcard *ngIf="i%2 != 0" color="--d" [white]="true" [header]="bullet.title" [firstbody]="bullet.firstbody" [secondbody]="bullet.secondbody" [bullets]="bullet.bullets" columns="2" [buttonTitle]="bullet.buttonTitle" ></app-bulletcard>
+</ng-container>
+<ng-container *ngFor="let card of onecards; let i = index ">
+  <app-centercard *ngIf="i%2 == 0" color="--fourth" [header]="card.title" [body]="card.body" [buttonTitle]="card.buttonTitle" [buttonLink]="card.buttonLink"></app-centercard>
+  <app-centercard *ngIf="i%2 != 0" color="--fifth" [header]="card.title" [body]="card.body" [buttonTitle]="card.buttonTitle" [buttonLink]="card.buttonLink"></app-centercard>
+</ng-container>
+<ng-container *ngFor="let bullet of twobullet; let i = index ">
+  <app-bulletcard *ngIf="i%2 != 0" color="--fifth" [header]="bullet.title" [firstbody]="bullet.firstbody" [secondbody]="bullet.secondbody" [bullets]="bullet.bullets" columns="2" [buttonTitle]="bullet.buttonTitle" ></app-bulletcard>
+  <app-bulletcard *ngIf="i%2 == 0" color="--d" [white]="true" [header]="bullet.title" [firstbody]="bullet.firstbody" [secondbody]="bullet.secondbody" [bullets]="bullet.bullets" columns="2" [buttonTitle]="bullet.buttonTitle" ></app-bulletcard>
+</ng-container>

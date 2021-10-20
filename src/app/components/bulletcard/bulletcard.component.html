@@ -1,0 +1,19 @@
+<mat-card class="card" [ngStyle]="{'background-color': 'var(' + color + ')', 'color': white? 'whitesmoke': 'black'}">
+  <div class="container">
+    <div class="mat-h1">{{header}}
+    </div>
+    <div class="mat-body center">{{firstbody}}
+    </div>
+    <ul [ngStyle]="{'column-count': columns}" class="mat-body bulletlist">
+      <li *ngFor="let bullet of bullets" class="mat-body bullet">
+        {{bullet}}
+      </li>
+    </ul>
+    <div class="mat-body center">{{secondbody}}
+    </div>
+    <div class="small-button">
+      <button *ngIf="buttonTitle" mat-raised-button class="button" [routerLink]="buttonLink" routerLinkActive="active">{{buttonTitle}}
+      </button>
+    </div>
+  </div>
+</mat-card>

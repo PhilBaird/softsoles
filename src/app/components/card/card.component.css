@@ -1,0 +1,31 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin-left: 2rem;
+}
+.header{
+  text-align: center;
+}
+.card{
+  background-color: var(--second);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.image{
+  max-height: 20rem;
+  max-width: 20rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+

@@ -1,0 +1,27 @@
+
+<mat-card *ngIf="!s.isMobile()" class="card" style="background-color: var({{color}});">
+  <div *ngIf="imageLink" class="image">
+    <img [src]="imageLink">
+  </div>
+  <div class="container">
+    <div class="mat-h1 left">{{header}}
+    </div>
+    <div class="mat-body left">{{body}}
+    </div>
+    <div class="small-button">
+      <button *ngIf="buttonTitle" mat-raised-button class="button" [routerLink]="buttonLink" routerLinkActive="active">
+        {{buttonTitle}}
+      </button>
+    </div>
+  </div>
+</mat-card>
+<app-centercard *ngIf="s.isMobile()"
+                [header]="header"
+                [body]="body"
+                [buttonTitle]="buttonTitle"
+                [buttonLink]="buttonLink"
+                [color]="color"
+               >
+
+</app-centercard>
+

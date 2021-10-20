@@ -1,0 +1,22 @@
+<div class="page-layout" *ngIf="!s.isMobile()">
+  <app-navbar class="nav"></app-navbar>
+    <div class="middle">
+      <router-outlet></router-outlet>
+    </div>
+  <app-footer class="footer"></app-footer>
+</div>
+<div class="page-layout" *ngIf="s.isMobile()">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer class="sidenav" mode="over">
+      <div class="mat-h1-f header">Soft Soles</div>
+      <ng-container *ngFor="let nav of navItems">
+        <button class="navitem mat-body" mat-button [routerLink]="nav.link" routerLinkActive="active" (click)="drawer.close()">{{nav.title}}
+        </button>
+      </ng-container>
+    </mat-drawer>
+    <app-mobilenavbar (click)="drawer.toggle()"></app-mobilenavbar>
+    <div class="middle">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</div>

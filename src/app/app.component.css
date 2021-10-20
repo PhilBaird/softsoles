@@ -1,0 +1,52 @@
+.page-layout{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: hidden;
+}
+.header{
+  justify-self: flex-start;
+  padding-bottom: 2rem;
+}
+.footer{
+  justify-self: flex-end;
+}
+.middle{
+  min-height: 77vh;
+}
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  padding: 20px;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fourth);
+}
+.navitem {
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 3rem;
+  /*background-color: var(--e);*/
+  /*color: var(--fifth);*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.icon{
+  margin-left: auto;
+}
+
+
+

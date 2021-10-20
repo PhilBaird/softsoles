@@ -1,0 +1,11 @@
+<app-displaybar buttonTitle="Join Now" text="Nursing The Way It Should Be."></app-displaybar>
+<app-bulletcard color="--fifth" [header]="bullet.title" [firstbody]="bullet.firstbody" [secondbody]="bullet.secondbody" [bullets]="bullet.bullets" columns="2" [buttonTitle]="bullet.buttonTitle" ></app-bulletcard>
+<ng-container *ngFor="let card of cards; let i = index ">
+  <app-centercard *ngIf="i%2 == 0" color="--fourth" [header]="card.title" [body]="card.body" [buttonTitle]="card.buttonTitle" [buttonLink]="card.buttonLink"></app-centercard>
+  <app-centercard *ngIf="i%2 != 0" color="--fifth" [header]="card.title" [body]="card.body" [buttonTitle]="card.buttonTitle" [buttonLink]="card.buttonLink"></app-centercard>
+</ng-container>
+<app-centercard [header]="'Our Team'" ></app-centercard>
+<ng-container *ngFor="let profile of profiles; let i = index ">
+  <app-profilecard *ngIf="i%2 == 0" color="--fourth" [name]="profile.name" [body]="profile.body" [imageLink]="profile.imageLink"></app-profilecard>
+  <app-profilecard *ngIf="i%2 != 0" color="--fifth" [name]="profile.name" [body]="profile.body" [imageLink]="profile.imageLink"></app-profilecard>
+</ng-container>

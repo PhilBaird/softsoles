@@ -1,0 +1,13 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.color{
+  background-color: white;
+}
+.img-wrap{
+  height: 100%
+}
+img{
+  height: 100%
+}
+

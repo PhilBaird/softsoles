@@ -1,0 +1,19 @@
+<!--<google-map></google-map>-->
+
+<!--<img src="https://maps.googleapis.com/maps/api/staticmap?center=329MarchRoad,Kanata&zoom=14&size=400x400&key=AIzaSyD4duQ-nbCcWrf6TrsYz8_G4DP0pLWrbuo">-->
+
+<mat-card class="card" style="background-color: var({{color}});">
+  <div class="container">
+    <div class="mat-h1">
+      {{header}}
+    </div>
+    <div class="mat-body center">
+      {{body}}
+    </div>
+    <div class="small-button">
+      <button *ngIf="buttonTitle" mat-raised-button class="button" (click)="click()" routerLinkActive="active">
+        {{buttonTitle}}
+      </button>
+    </div>
+  </div>
+</mat-card>

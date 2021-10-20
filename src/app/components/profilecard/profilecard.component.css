@@ -1,0 +1,32 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 100rem;
+  text-align: center;
+}
+.header{
+  text-align: center;
+}
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+  padding-bottom: 2vw;
+  padding-top: 2vw;
+}
+.image{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 2rem;
+}
+

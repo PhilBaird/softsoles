@@ -1,0 +1,13 @@
+<mat-card class="card parallaxcard" style="background-image: url({{imageLink}})">
+  <section class="container">
+<!--    <img class="image" [src]="imageLink" alt="background">-->
+    <div class="text">
+      <span class="mat-title">{{text}}</span>
+      <div class="small-button">
+        <button *ngIf="buttonTitle"mat-raised-button class="button" [routerLink]="buttonLink" routerLinkActive="active">
+        {{buttonTitle}}
+        </button>
+      </div>
+    </div>
+  </section>
+</mat-card>
