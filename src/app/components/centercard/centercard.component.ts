@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MainService} from '../../../main.service';
+import {Card} from '../card/card.component';
 
 @Component({
   selector: 'app-centercard',
@@ -8,13 +9,15 @@ import {MainService} from '../../../main.service';
 })
 export class CentercardComponent implements OnInit {
 
-  @Input() header = 'Caring';
-  @Input() body = 'At Soft Soles Advanced and Diabetic Foot Care, we are both registered nurses (RNs) and registered practical nurses (RPN). We work in hospitals, clinics, communities, and facilities. Universally, what we see is situations where independence and health deteriorates or is lost due to lower limb disease. We have partnered with facilities and clinics to decrease this risk and hope to help you as well as your family maintain lower limb health.';
-  @Input() buttonTitle: string;
-  @Input() buttonLink: string;
-  @Input() buttonExt = false;
-  @Input() color = '--second';
-  @Input() white = false;
+  // @Input() header = 'Caring';
+  // @Input() body = 'At Soft Soles Advanced and Diabetic Foot Care, we are both registered nurses (RNs) and registered practical nurses (RPN). We work in hospitals, clinics, communities, and facilities. Universally, what we see is situations where independence and health deteriorates or is lost due to lower limb disease. We have partnered with facilities and clinics to decrease this risk and hope to help you as well as your family maintain lower limb health.';
+  // @Input() buttonTitle: string;
+  // @Input() buttonLink: string;
+  // @Input() buttonExt = false;
+  // @Input() color = '--second';
+  // @Input() white = false;
+
+  @Input() card: Card = {};
 
 
   constructor() {
@@ -24,8 +27,9 @@ export class CentercardComponent implements OnInit {
   }
 
   click() {
-    if(this.buttonExt){
-      window.open(this.buttonLink);
+    if(this.card.buttonExt){
+      window.open(this.card.buttonLink);
     }
   }
 }
+

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {BulletCard} from '../../components/bulletcard/bulletcard.component';
+import {Card} from '../../components/card/card.component';
 
 @Component({
   selector: 'app-about',
@@ -6,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  bullet = {
+  bullet: BulletCard = {
+    columns: 2,
+    color: '--fifth',
     title: 'Who We Are',
     buttonTitle: 'See Out Services',
     firstbody: 'Soft Soles is a dynamic holistic foot care company that provides medical and holistic nursing foot care. \n' +
@@ -24,7 +28,7 @@ export class AboutComponent implements OnInit {
       'Are preferred providers for Veterans Affairs'
     ],
   };
-  cards: any = [
+  cards: Card[] = [
     {
         title: 'What We Do',
         body: 'At Soft Soles Advanced and Diabetic Foot Care, we are both registered nurses (RNs) and registered practical nurses (RPN). We work in hospitals, clinics, communities, and facilities. Universally, what we see is situations where independence and health deteriorates or is lost due to lower limb disease. We have partnered with facilities and clinics to decrease this risk and hope to help you as well as your family maintain lower limb health.'
@@ -45,9 +49,9 @@ export class AboutComponent implements OnInit {
         'Request more information.',
     }
   ];
-  profiles: any = [
+  profiles: Card[] = [
     {
-      name: 'Michelle De Grandmont, RPN, Owner, Nurse Educator',
+      title: 'Michelle De Grandmont, RPN, Owner, Nurse Educator',
       imageLink: '../../../assets/nurses/michelle.png',
       body: 'Michelle De Grandmont is a bilingual registered nurse. She has taken advanced diabetic foot care nurse training. \n' +
         'Her work experience includes over 15 years of experience in gerontology, acute care medicine, diabetes, and holistic healing modalities. \n' +
@@ -61,7 +65,7 @@ export class AboutComponent implements OnInit {
         'Michelle and her partner live on a hobby farm with their five boys in Dunrobin, Ontario',
     },
     {
-      name: 'Amber Lawford, RN, Advanced Diabetic Foot Care Nurse',
+      title: 'Amber Lawford, RN, Advanced Diabetic Foot Care Nurse',
       imageLink: '../../../assets/nurses/amber.png',
       body: 'Amber has been a Registered Nurse in good standing with the College of Nurses of Ontario since 1998. Specializing in acute care medicine, and community health, Amber brings a passion for teaching and administering care to clients in their home.\n' +
         'Amber employs a holistic approach to each person she meets, enjoying teaching, sharing of stories, and forming quality relationships. Amber carries advanced diabetic foot care certification and provides excellent gold standard service to all of her clients.\n' +
@@ -69,7 +73,7 @@ export class AboutComponent implements OnInit {
         '“Nursing is a great privilege. I love seeing people in their homes, surrounded by the relics of their life, personal momentos, and family photographs. I feel a great connection and bond to the clients that welcome me into their home.”',
     },
     {
-      name: 'Michelle De Grandmont, RPN, Owner, Nurse Educator',
+      title: 'Michelle De Grandmont, RPN, Owner, Nurse Educator',
       imageLink: '../../../assets/nurses/michelle.png',
       body: 'Michelle De Grandmont is a bilingual registered nurse. She has taken advanced diabetic foot care nurse training. \n' +
         'Her work experience includes over 15 years of experience in gerontology, acute care medicine, diabetes, and holistic healing modalities. \n' +
@@ -83,7 +87,7 @@ export class AboutComponent implements OnInit {
         'Michelle and her partner live on a hobby farm with their five boys in Dunrobin, Ontario',
     },
     {
-      name: 'Michelle De Grandmont, RPN, Owner, Nurse Educator',
+      title: 'Michelle De Grandmont, RPN, Owner, Nurse Educator',
       imageLink: '../../../assets/nurses/michelle.png',
       body: 'Michelle De Grandmont is a bilingual registered nurse. She has taken advanced diabetic foot care nurse training. \n' +
         'Her work experience includes over 15 years of experience in gerontology, acute care medicine, diabetes, and holistic healing modalities. \n' +
@@ -101,6 +105,12 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.profiles.forEach( (profile , i ) => {
+      profile.color = i % 2 === 0 ?  '--fourth' : '--fifth';
+    });
+    this.cards.forEach( (profile , i ) => {
+      profile.color = i % 2 === 0 ?  '--fourth' : '--fifth';
+    });
   }
 
 }

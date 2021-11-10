@@ -18,6 +18,9 @@
 
   /*justify-content: center;*/
 }
+.container{
+  margin-left: 2rem;
+}
 .text{
   /*position: absolute;*/
   /*left: 50%;*/

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Card} from '../card/card.component';
 
 @Component({
   selector: 'app-maps',
@@ -7,12 +8,14 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class MapsComponent implements OnInit {
 
-  @Input() header = 'Kanata Mews Clinic';
-  @Input() body = '329 March Road, Kanata';
-  @Input() buttonTitle: string;
-  @Input() buttonLink: string;
-  @Input() color = '--second';
-  @Input() buttonExt = false;
+  // @Input() header = 'Kanata Mews Clinic';
+  // @Input() body = '329 March Road, Kanata';
+  // @Input() buttonTitle: string;
+  // @Input() buttonLink: string;
+  // @Input() color = '--second';
+  // @Input() buttonExt = false;
+
+  @Input() card: Card = {};
 
   constructor() { }
 
@@ -20,8 +23,8 @@ export class MapsComponent implements OnInit {
   }
 
   click() {
-    if(this.buttonExt){
-      window.open(this.buttonLink);
+    if(this.card.buttonExt){
+      window.open(this.card.buttonLink);
     }
   }
 

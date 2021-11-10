@@ -1,14 +1,14 @@
-<mat-card class="parallaxcard" style="background-image: url({{imageLink}})">
+<mat-card class="parallaxcard" [ngStyle]="{'background-image': card.color}">
   <div class="container">
     <div class="mat-h1">
-      {{header}}
+      {{card.title}}
     </div>
     <div class="mat-body">
-      {{body}}
+      {{card.body}}
     </div>
     <div class="small-button" >
-      <button *ngIf="buttonTitle" class="white button" mat-raised-button [routerLink]="buttonLink" routerLinkActive="active">
-        {{buttonTitle}}
+      <button *ngIf="card.buttonTitle" class="white button" mat-raised-button [routerLink]="card.buttonLink" routerLinkActive="active">
+        {{card.buttonTitle}}
       </button>
     </div>
   </div>

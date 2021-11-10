@@ -58,6 +58,9 @@ export class Covid19Component implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.onecards.forEach( (card , i ) => {
+      card.color = i % 2 === 0 ?  '--fourth' : '--fifth';
+    });
   }
 
 }
