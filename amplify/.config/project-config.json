@@ -7,7 +7,7 @@
     "config": {
       "SourceDir": "src",
       "DistributionDir": "dist/softsoles/browser",
-      "BuildCommand": "npm run-script build",
+      "BuildCommand": "ng build",
       "StartCommand": "ng serve"
     }
   },
