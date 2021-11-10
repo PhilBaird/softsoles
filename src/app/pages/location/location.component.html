@@ -1,28 +1,28 @@
 <!--<app-maps></app-maps>-->
 <app-displaybar text="In Home + In Facility + In Clinic + In Hospital" [buttonTitle]="'Book Now'"></app-displaybar>
 <ng-container *ngFor="let card of cards">
-  <app-card color="--fourth" [header]="card.header" [body]="card.body"></app-card>
+  <app-card color="--fourth" [card]="card"></app-card>
 </ng-container>
 <div style="width: 100%" *ngIf="!s.isMobile()">
   <div class="grid-container">
-    <ng-container *ngFor="let location of locations">
+    <ng-container *ngFor="let location of loc">
       <div class="row">
-        <app-maps class="grid-item" color="--forth" [header]="location.title" [body]="location.address" buttonTitle="Here" [buttonExt]="true" [buttonLink]="toGoogle(location.address)">
+        <app-maps class="grid-item" [card]="location">
         </app-maps>
       </div>
     </ng-container>
   </div>
   <div class="leftover-container">
-    <ng-container *ngFor="let location of leftover">
-      <app-maps class="grid-item" color="--forth" [header]="location.title" [body]="location.address" buttonTitle="Here" [buttonExt]="true" [buttonLink]="toGoogle(location.address)">
+    <ng-container *ngFor="let location of lef">
+      <app-maps class="grid-item" [card]="location">
       </app-maps>
     </ng-container>
   </div>
 </div>
 <div style="width: 100%" *ngIf="s.isMobile()">
   <div class="mobile-container">
-    <ng-container *ngFor="let location of leftover">
-      <app-maps class="grid-item mobile" color="--forth" [header]="location.title" [body]="location.address" buttonTitle="Here" [buttonExt]="true" [buttonLink]="toGoogle(location.address)">
+    <ng-container *ngFor="let location of lef">
+      <app-maps class="grid-item mobile" [card]="location">
       </app-maps>
     </ng-container>
   </div>

@@ -4,11 +4,16 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build -base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc",
+    "philstart": "sudo ng build --prod --base-href ./",
+    "dev:ssr": "sudo ng run softsoles:serve-ssr",
+    "serve:ssr": "sudo node dist/softsoles/server/main.js",
+    "build:ssr": "sudo ng build --prod && ng run softsoles:server:production",
+    "prerender": "sudo ng run softsoles:prerender"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +27,12 @@
     "@angular/material": "^11.2.13",
     "@angular/platform-browser": "~11.0.5",
     "@angular/platform-browser-dynamic": "~11.0.5",
+    "@angular/platform-server": "~11.0.5",
     "@angular/router": "~11.0.5",
+    "@aws-amplify/ui-angular": "^1.0.31",
+    "@nguniversal/express-engine": "^11.0.1",
+    "aws-amplify": "^4.3.4",
+    "express": "^4.15.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -31,6 +41,9 @@
     "@angular-devkit/build-angular": "~0.1100.5",
     "@angular/cli": "~11.0.5",
     "@angular/compiler-cli": "~11.0.5",
+    "@jefiozie/ngx-aws-deploy": "^4.0.0",
+    "@nguniversal/builders": "^11.0.1",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",

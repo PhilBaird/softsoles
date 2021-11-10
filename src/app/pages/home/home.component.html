@@ -1,9 +1,17 @@
-<app-displaybar [buttonLink]="'/services'" buttonTitle="Book Now"></app-displaybar>
-<app-card [buttonTitle]="'Book Now'"></app-card>
-<app-parallaxcard [buttonTitle]="'Book Now'"></app-parallaxcard>
-<app-centercard color="--a" [buttonTitle]="'Book Now'"></app-centercard>
-<app-bulletcard color="--b" [buttonTitle]="'Book Now'"></app-bulletcard>
-<app-profilecard color="--c" ></app-profilecard>
-<app-maps color="--d" [buttonTitle]="'Book Now'"></app-maps>
+<!--<app-displaybar [buttonLink]="'/services'" buttonTitle="Book Now"></app-displaybar>-->
+<!--<app-card [buttonTitle]="'Book Now'"></app-card>-->
+<!--<app-parallaxcard [buttonTitle]="'Book Now'"></app-parallaxcard>-->
+<!--<app-centercard color="&#45;&#45;a" [buttonTitle]="'Book Now'"></app-centercard>-->
+<!--<app-bulletcard color="&#45;&#45;b" [buttonTitle]="'Book Now'"></app-bulletcard>-->
+<!--<app-profilecard color="&#45;&#45;c" ></app-profilecard>-->
+<!--<app-maps color="&#45;&#45;d" [buttonTitle]="'Book Now'"></app-maps>-->
+<app-displaybar buttonTitle="Register Now" text="Learn, Discover, and Become A Foot Care Nurse. "></app-displaybar>
+<ng-container *ngFor="let card of onecards">
+  <app-centercard [card]="card" ></app-centercard>
+</ng-container>
+<ng-container *ngFor="let card of twocards">
+  <app-card [card]="card" ></app-card>
+</ng-container>
+
 
 

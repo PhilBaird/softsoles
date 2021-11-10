@@ -1,13 +1,13 @@
-<mat-card class="card" style="background-color: var({{color}});">
+<mat-card class="card" [ngStyle]="{'background-color': card.color}">
   <div class="container">
     <div class="image">
-      <img [src]="imageLink" alt="Profile Picture">
+      <img [src]="card.imageLink" alt="Profile Picture">
     </div>
     <div class="mat-h1">
-      {{name}}
+      {{card.title}}
     </div>
     <div class="mat-body">
-      {{body}}
+      {{card.body}}
     </div>
   </div>
 </mat-card>

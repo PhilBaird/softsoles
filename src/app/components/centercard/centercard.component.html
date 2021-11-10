@@ -1,11 +1,11 @@
-<mat-card class="card" [ngStyle]="{'background-color': 'var(' + color + ')', 'color': white? 'whitesmoke': 'black'}">
+<mat-card class="card" [ngStyle]="{'background-color': 'var(' + card.color + ')', 'color': card.white? 'whitesmoke': 'black'}">
   <div class="container">
-    <div class="mat-h1">{{header}}
+    <div class="mat-h1">{{card.title}}
     </div>
-    <div class="mat-body">{{body}}
+    <div class="mat-body">{{card.body}}
     </div>
     <div class="small-button">
-      <button *ngIf="buttonTitle" mat-raised-button class="button" [routerLink]="buttonLink" (click)="click()" routerLinkActive="active">{{buttonTitle}}
+      <button *ngIf="card.buttonTitle" mat-raised-button class="button" [routerLink]="card.buttonLink" (click)="click()" routerLinkActive="active">{{card.buttonTitle}}
       </button>
     </div>
   </div>

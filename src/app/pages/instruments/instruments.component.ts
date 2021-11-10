@@ -32,6 +32,9 @@ export class InstrumentsComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.onecards.forEach( (card , i ) => {
+      card.color = i % 2 === 0 ?  '--fourth' : '--fifth';
+    });
   }
 
 }

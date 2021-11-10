@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Card} from '../card/card.component';
 
 @Component({
   selector: 'app-profilecard',
@@ -7,12 +8,14 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ProfilecardComponent implements OnInit {
 
-  @Input() name = 'Michelle De Grandmont, RPN, Owner, Nurse Educator';
-  @Input() body = 'Michelle De Grandmont is a bilingual registered nurse. She has taken advanced diabetic foot care nurse training. \n' +
+  // @Input() name = 'Michelle De Grandmont, RPN, Owner, Nurse Educator';
+  // @Input() body = 'Michelle De Grandmont is a bilingual registered nurse. She has taken advanced diabetic foot care nurse training. \n' +
+  //
+  //   'Her work experience includes over 15 years of experience in gerontology, acute care medicine, diabetes, and holistic healing modalities. mic';
+  // @Input() imageLink = '../../../assets/nurses/michelle.png';
+  // @Input() color = '--second';
 
-    'Her work experience includes over 15 years of experience in gerontology, acute care medicine, diabetes, and holistic healing modalities. mic';
-  @Input() imageLink = '../../../assets/nurses/michelle.png';
-  @Input() color = '--second';
+  @Input() card: Card;
 
   constructor() { }
 

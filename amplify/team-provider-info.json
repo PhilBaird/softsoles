@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-softsoles-dev-210011-authRole",
+      "UnauthRoleArn": "arn:aws:iam::690236946311:role/amplify-softsoles-dev-210011-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::690236946311:role/amplify-softsoles-dev-210011-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-softsoles-dev-210011-deployment",
+      "UnauthRoleName": "amplify-softsoles-dev-210011-unauthRole",
+      "StackName": "amplify-softsoles-dev-210011",
+      "StackId": "arn:aws:cloudformation:us-east-1:690236946311:stack/amplify-softsoles-dev-210011/cb3f6e20-4100-11ec-b308-0e76bac974a5",
+      "AmplifyAppId": "dgpqsj7sb514b"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dgpqsj7sb514b",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

@@ -31,6 +31,8 @@ import { MobilenavbarComponent } from './components/mobilenavbar/mobilenavbar.co
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {GoogleMapsModule} from '@angular/google-maps';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
   {path: 'page', component: PageComponent},
@@ -43,7 +45,9 @@ const routes: Routes = [
   {path: 'education', component: EducationComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'research', component: ResearchComponent},
-]
+  {path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: '**', redirectTo: '/home'}
+];
 
 @NgModule({
   declarations: [
@@ -72,11 +76,15 @@ const routes: Routes = [
   ],
   imports: [
     BrowserAnimationsModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'softsoles' }),
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    RouterModule.forRoot((routes)),
+    AmplifyUIAngularModule,
+    AppRoutingModule,
+    RouterModule.forRoot((routes), {
+    initialNavigation: 'enabled'
+}),
     MatCardModule,
     MatSidenavModule,
   ],

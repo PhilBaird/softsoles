@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {BulletCard} from '../../components/bulletcard/bulletcard.component';
+import {Card} from '../../components/card/card.component';
 
 @Component({
   selector: 'app-services',
@@ -9,9 +11,10 @@ export class ServicesComponent implements OnInit {
 
   constructor() { }
 
-  onebullet = [{
+  onebullet: BulletCard[] = [{
     title: 'Services',
     buttonTitle: 'Training Courses',
+    columns: 2,
     secondbody:
       'For more information or to schedule an appointment:\n' +
       '\n' +
@@ -33,7 +36,7 @@ export class ServicesComponent implements OnInit {
     ],
   }];
 
-  onecards: any = [
+  onecards: Card[] = [
     {
       title: 'Assessment Services',
       body: 'Nurses are experts in the assessment, planning, implementation and evaluation of diabetes.\n' +
@@ -73,7 +76,7 @@ export class ServicesComponent implements OnInit {
         'To ascertain whether phototherapy with the Genesis Health Light laser is the appropriate treatment option for their particular case of toenail fungus or onychomycosis, it would be best to consult with a Soft Soles Nurse.',
     },
   ];
-  twocards: any = [
+  twocards: Card[] = [
     {
       title: 'Nail Clipping',
       body: 'Our Foot Care treatment includes a full foot assessment, trimming and filing of the toenails and a moisturizing foot rub. Your Foot Care nurse will bring all the necessary equipment with them. Foot Care Nurses are experienced in the removal of ingrown toenails, calluses and corns as well as treatment of fungal nails.',
@@ -94,9 +97,10 @@ export class ServicesComponent implements OnInit {
       body: 'Payments can be made to Soft Soles via cheque, e-transfer, credit card, or cash. We are a recognized Veterans affair provider. Insurance covers 80% of foot care and the VA covers 100%. A physician prescription is often required annually to maintain your coverage.',
     },
   ];
-  twobullet = [
+  twobullet: BulletCard[] = [
     {
     title: 'Foot Care Treatments',
+    columns: 2,
     firstbody: 'Soft Tissue Pathology  Nail Pathology  Structural Abnormalities',
     bullets: [
       'Callous (tylomas)',
@@ -123,6 +127,7 @@ export class ServicesComponent implements OnInit {
     {
       title: 'Filament Testing',
       buttonTitle: 'Book Now',
+      columns: 2,
       firstbody: 'Sensitivity to touch may be tested using a soft nylon fiber called a monofilament. If you are unable to feel the filament on your feet, it is a sign that you have lost sensation in those nerves.\n' +
         '\n' +
         'Diabetic neuropathy has no known cure, although there are methods to slow the progression.\n' +
@@ -138,6 +143,15 @@ export class ServicesComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.onecards.forEach( (card , i ) => {
+      card.color = i % 2 === 0 ?  '--fourth' : '--fifth';
+    });
+    this.onebullet.forEach( (card , i ) => {
+      card.color = i % 2 === 0 ?  '--fourth' : '--fifth';
+    });
+    this.twobullet.forEach( (card , i ) => {
+      card.color = i % 2 === 0 ?  '--fourth' : '--fifth';
+    });
   }
 
 }
