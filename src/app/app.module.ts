@@ -43,7 +43,9 @@ const routes: Routes = [
   {path: 'education', component: EducationComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'research', component: ResearchComponent},
-]
+  {path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: '**', redirectTo: '/home'}
+];
 
 @NgModule({
   declarations: [
